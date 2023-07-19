@@ -36,11 +36,11 @@ def check_for_changes():
     return data
 
 
-   
-def load_json():
-    with open('SampleReturnedData.json', 'r', encoding='utf-8') as f:
-        data = json.load(f)
-        return data
+# If you have a JSON file saved locally, you can use this function to load it   
+# def load_json():
+#     with open('SampleReturnedData.json', 'r', encoding='utf-8') as f:
+#         data = json.load(f)
+#         return data
 
 def generateTable(data):
 
