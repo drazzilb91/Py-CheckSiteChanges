@@ -36,11 +36,11 @@ def check_for_changes():
     return data
 
 
-   
-def load_json():
-    with open('SampleReturnedData.json', 'r', encoding='utf-8') as f:
-        data = json.load(f)
-        return data
+# If you have a JSON file saved locally, you can use this function to load it   
+# def load_json():
+#     with open('SampleReturnedData.json', 'r', encoding='utf-8') as f:
+#         data = json.load(f)
+#         return data
 
 def generateTable(data):
 
@@ -92,7 +92,7 @@ def main(delay_in_seconds=3600):
         st.write('Next update at: ', next_update)
         
         # Generate table
-        df = generateTable(load_json()['data'])
+        df = generateTable(data=data)
     
         with st.container():
             st.write('Upcoming games:')
